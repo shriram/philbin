@@ -22,7 +22,7 @@ Of course, we don't want to have to select too precisely. We want to do it quick
 
 A good inference (note that `m` is ambiguous: "miles", "meters", or something else?):
 
-![screen capture](./screen-1-1.png | width=250)
+![screen capture](/screen-1-1.png?raw=true | width=250)
 
 A weak inference:
 
