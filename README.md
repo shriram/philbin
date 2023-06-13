@@ -14,7 +14,7 @@ Of course, we don't want to have to select too precisely. We want to do it quick
 
 ## Demo
 
-[watch the demo video](demo-1.mov)
+![watch the demo video](demo-1.mov?raw=true)
 
 ## Examples
 
