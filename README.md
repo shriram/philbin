@@ -18,7 +18,7 @@ https://github.com/shriram/philbin/assets/75030/cd6f47c0-4f34-49af-85b8-18311d20
 
 ## Examples
 
-### File: `db1.txt`. gpt-3.5-turbo, default temperature. 
+### File: [`db1.txt`](db1.txt). gpt-3.5-turbo, default temperature. 
 
 A good inference (note that `m` is ambiguous: "miles", "meters", or something else?):
 
@@ -36,7 +36,7 @@ Another good inference, but difficult to turn into a meaningful regexp since it 
 
 ![screen capture](screen-1-4.png)
 
-### File: `db2.txt`. gpt-3.5-turbo, default temperature. 
+### File: [`db2.txt`](db2.txt). gpt-3.5-turbo, default temperature. 
 
 Clean, basic inference, but too specific due to the selection:
 
@@ -50,19 +50,19 @@ Why stop with structured data?
 
 ![screen capture](screen-2-3.png)
 
-### File: `db3.txt`. gpt-3.5-turbo, default temperature. 
+### File: [`db3.txt`](db3.txt). gpt-3.5-turbo, default temperature. 
 
 This is meant to simulate a rough selection, e.g., by loosely tracing a finger. Since we're using rectangular selection in the buffer, we'll shift around the data to simulate it.
 
 ![screen capture](screen-3-1.png)
 
-### File: `db4.txt`. gpt-3.5-turbo, default temperature.
+### File: [`db4.txt`](db4.txt). gpt-3.5-turbo, default temperature.
 
 Now we can really exploit the *language* part of an LLM, at least for well-known languages. Good luck with regular expressions, though!
 
 ![screen capture](screen-4-1.png)
 
-### File: `db5.txt`. gpt-3.5-turbo, default temperature.
+### File: [`db5.txt`](db5.txt). gpt-3.5-turbo, default temperature.
 
 We've got to do an example from Geoffrey's beloved domain, recipes.
 
