@@ -14,11 +14,7 @@ Of course, we don't want to have to select too precisely. We want to do it quick
 
 ## Demo
 
-<video>
-  <source src="demo-1.mov" type="video/quicktime">
-  Sorry, your browser does not support the video tag.
-  Please view <a href="demo-1.mov" title="demo video">this file</a>.
-</video>
+https://github.com/shriram/philbin/assets/75030/cd6f47c0-4f34-49af-85b8-18311d200955
 
 ## Examples
 
