@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css">
+  <style>
+    #editorArea {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-top: 10px;
+      min-height: 100px;
+    }
+    .CodeMirror {
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div id="editorArea"></div>
+  
+  <button id="analyzeBtn">Analyze</button>
+
+  <p id="output"></p>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
+  <script>
+    var cm;  // We'll store our CodeMirror instance in this variable.
+
+if (cm) cm.toTextArea();
+
+      cm = CodeMirror(document.getElementById('editorArea'), {
+        value: '',
+        lineWrapping: true,
+        extraKeys: {"Ctrl-Q": function(cm){ cm.execCommand("selectAll"); }},
+      });
+
+      cm.setOption("theme", "default");
+      cm.setOption("styleSelectedText", true);
+      cm.setOption("configureMouse", function(cm, repeat, event) {
+        return {unit: "rectangle"};
+      });
+
+    document.getElementById('analyzeBtn').addEventListener('click', async function() {
+	document.getElementById('output').innerText = 'Analyzing…';
+      let selectedText = cm.getSelection();
+      const promptText = `Your answer should be a JSON object with two fields.
+			  The field \`explanation\` should say what kind of data the following rows represent.
+			  Please try to answer as briefly as possible.
+                          The field \`regexp\` should be a regular expression that tries to match these kinds of data.
+			  The regexp should both ignore superfluous data and generalize from the exact data to other data of the kind given by explanation.
+			  Make sure to wrap the regexp in strings so that it is not accidentally parsed as JSON.
+			   \n\n ${selectedText} `;
+//	    + selectedText;
+      
+      fetch('https://api.openai.com/v1/chat/completions', {
+        method: 'POST',
+        headers: {
+          'Authorization': 'Bearer OPENAI_API_KEY', // Replace with your OpenAI API key
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          'model': 'gpt-3.5-turbo',
+          'messages': [{'role': 'user', 'content': promptText}]
+        })
+      })
+	    .then((res) => res.json())
+	    .then((rJ) => {
+		var c = JSON.parse(rJ.choices[0].message.content);
+		var expl = c.explanation;
+		var reg = c.regexp;
+		document.getElementById('output').innerHTML = `
+                  <h2>Explanation</h2>
+                  <p>${expl}</p>
+		  <h2>Regexp</h2>
+		  <pre>${reg}</pre>` });
+    });
+
+  </script>
+</body>
+</html>

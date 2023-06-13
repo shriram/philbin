@@ -1,0 +1,17 @@
+OBJECTS
+* Sep 23  Objects, this, closing over local state
+  Sep 25  Classes, static
+  Sep 27  Inheritance, fall-through methods, mixins
+* Sep 30  Object design space
+TYPES
+  Oct 02  Type checker and judgments
+  Oct 04  Expression and conditional types
+* Oct 07  Function types
+  Oct 09  Termination, typing non-termination
+  Oct 11  Halting problem (for types, calc vars)
+* Oct 16  Datatypes, recursive datatypes
+  Oct 18  Explicit polymorphism
+* Oct 21  H-M
+  Oct 23  Object types
+  Oct 25  Scripty types
+* Oct 28  Dependent types
