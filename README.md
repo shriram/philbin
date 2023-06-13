@@ -14,7 +14,7 @@ Of course, we don't want to have to select too precisely. We want to do it quick
 
 ## Demo
 
-![basic operation video](demo-1.mov)
+![demo videp](https://github.com/shriram/philbin/assets/75030/89416e8d-60ac-4ec3-a7f6-3bb058e67959)
 
 ## Examples
 
