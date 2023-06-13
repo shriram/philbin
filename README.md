@@ -14,6 +14,8 @@ Of course, we don't want to have to select too precisely. We want to do it quick
 
 ## Demo
 
+<a href="demo-1.mov" title="demo video">Watch the Demo!</a>
+
 [watch the demo video](demo-1.mov?raw=true)
 
 ## Examples
