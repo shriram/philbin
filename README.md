@@ -14,7 +14,7 @@ Of course, we don't want to have to select too precisely. We want to do it quick
 
 ## Demo
 
-[Basic operation video](./demo-1.mov)
+![basic operation video](demo-1.mov)
 
 ## Examples
 
@@ -26,51 +26,51 @@ A good inference (note that `m` is ambiguous: "miles", "meters", or something el
 
 A weak inference:
 
-![screen capture](./screen-1-2.png | width=250)
+![screen capture](screen-1-2.png)
 
 A good inference (try several of this selection, you'll get interesting results):
 
-![screen capture](./screen-1-3.png | width=250)
+![screen capture](screen-1-3.png)
 
 Another good inference, but difficult to turn into a meaningful regexp since it requires knowledge of place names:
 
-![screen capture](./screen-1-3.png | width=250)
+![screen capture](screen-1-4.png)
 
 ### File: `db2.txt`. gpt-3.5-turbo, default temperature. 
 
 Clean, basic inference, but too specific due to the selection:
 
-![screen capture](./screen-2-1.png | width=250)
+![screen capture](screen-2-1.png)
 
 This selection doesn't always do the trick, but sometimes the LLM does nail it!
 
-![screen capture](./screen-2-2.png | width=250)
+![screen capture](screen-2-2.png)
 
 Why stop with structured data?
 
-![screen capture](./screen-2-3.png | width=250)
+![screen capture](screen-2-3.png)
 
 ### File: `db3.txt`. gpt-3.5-turbo, default temperature. 
 
 This is meant to simulate a rough selection, e.g., by loosely tracing a finger. Since we're using rectangular selection in the buffer, we'll shift around the data to simulate it.
 
-![screen capture](./screen-3-1.png | width=250)
+![screen capture](screen-3-1.png)
 
 ### File: `db4.txt`. gpt-3.5-turbo, default temperature.
 
 Now we can really exploit the *language* part of an LLM, at least for well-known languages. Good luck with regular expressions, though!
 
-![screen capture](./screen-4-1.png | width=250)
+![screen capture](screen-4-1.png)
 
 ### File: `db5.txt`. gpt-3.5-turbo, default temperature.
 
 We've got to do an example from Geoffrey's beloved domain, recipes.
 
-![screen capture](./screen-5-1.png | width=250)
+![screen capture](screen-5-1.png)
 
 Oh, that's quite specific:
 
-![screen capture](./screen-5-2.png | width=250)
+![screen capture](screen-5-2.png)
 
 ## Bugs
 
